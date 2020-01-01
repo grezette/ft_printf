@@ -1,0 +1,30 @@
+#ifndef LIBFTPRINTF_H
+# define LIBFTPRINTF_H
+
+#include <stdarg.h>
+#include "../libft/libft.h"
+
+typedef struct 	s_struct
+{
+	int			len;
+	int			bfor;
+	int			aftr;
+	int			zero;
+	int			pres;
+	int			blpr;
+} 				t_struct;
+
+int		ft_printf(const char *s, ...);
+int		ft_conv_s(va_list *ap, t_struct *var);
+int		ft_conv_p(va_list *ap, t_struct *var);
+int		ft_conv_diuxx(va_list *ap, t_struct *var, unsigned char c);
+int		ft_conv_c_prct(va_list *ap, t_struct *var, unsigned char c);
+
+void	ft_pars_flag_mz(const char **s, t_struct *var);
+void	ft_pars_flag_nb(const char **s, va_list *ap, t_struct *var);
+void	ft_pars_flag_pres(const char **s, va_list *ap, t_struct *var);
+void	ft_struct_init(t_struct *var, int bol);
+
+char	*ft_itoa_base(long long int n, char *s);
+
+#endif
