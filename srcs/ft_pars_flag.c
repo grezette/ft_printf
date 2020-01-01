@@ -6,7 +6,7 @@
 /*   By: grezette <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/31 23:11:31 by grezette          #+#    #+#             */
-/*   Updated: 2020/01/01 09:13:29 by grezette         ###   ########.fr       */
+/*   Updated: 2020/01/01 16:54:09 by grezette         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,9 +72,6 @@ void		ft_pars_flag_mz(const char **s, t_struct *var)
 {
 	while (**s == '-' || **s == '0')
 	{
-		/*attention, peut avoir des problemes dans les cas ou on a juste un seul '-'
-		  ou '0' et pas de nb apres. Dans ce cas rajouter deux variables boolenes
-		  dans la struct et stocker l'espassement dans les trucs prevu a cet effet*/
 		if (**s == '-')
 			var->aftr = 0;
 		else

@@ -6,17 +6,13 @@
 /*   By: grezette <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/31 03:17:16 by grezette          #+#    #+#             */
-/*   Updated: 2020/01/01 10:09:34 by grezette         ###   ########.fr       */
+/*   Updated: 2020/01/01 16:53:28 by grezette         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libftprintf.h"
-#include <stdio.h>
 
-// cspdiuxX%
-// -0*.*
-
-void		ft_struct_init(t_struct *var, int bol)
+void	ft_struct_init(t_struct *var, int bol)
 {
 	if (bol)
 		var->len = 0;
@@ -27,7 +23,7 @@ void		ft_struct_init(t_struct *var, int bol)
 	var->blpr = 0;
 }
 
-int			ft_deep_real_printf(const char **s, va_list *ap, t_struct *var)
+int		ft_deep_real_printf(const char **s, va_list *ap, t_struct *var)
 {
 	if (**s == 'c' || **s == '%')
 		return (ft_conv_c_prct(ap, var, **s));

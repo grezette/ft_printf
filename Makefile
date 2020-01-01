@@ -8,6 +8,7 @@ SRCS		=	./srcs/ft_printf.c \
 				./srcs/ft_pars_flag.c \
 				./srcs/ft_converters.c \
 				./srcs/ft_itoa_base.c \
+				./srcs/ft_conv_diuxx.c \
 			
 OBJS		=	${SRCS:.c=.o}
 

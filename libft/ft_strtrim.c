@@ -6,7 +6,7 @@
 /*   By: grezette <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 18:15:23 by grezette          #+#    #+#             */
-/*   Updated: 2019/11/10 17:11:19 by grezette         ###   ########.fr       */
+/*   Updated: 2020/01/01 16:52:30 by grezette         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@ static int	is_set(char c, const char *set)
 
 static int	trim_len(char const *s1, char const *set)
 {
-	size_t 	begin;
-	int	end;
+	size_t	begin;
+	int		end;
 
 	begin = 0;
 	end = (int)ft_strlen(s1) - 1;
