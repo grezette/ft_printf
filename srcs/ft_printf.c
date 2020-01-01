@@ -70,7 +70,7 @@ int		ft_printf(const char *s, ...)
 	{
 		if (ft_real_printf(&s, &ap, &var))
 			return (-1);
-		if (*s != '%')
+		if (*s != '%' && *s)
 			var.len += write(1, s++, 1);
 	}
 	va_end(ap);
