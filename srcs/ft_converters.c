@@ -26,20 +26,19 @@ int			ft_conv_p(va_list *ap, t_struct *var)
 	void	*p;
 
 	p = va_arg(*ap, void *);
-	if (!(s = ft_itoa_base((unsigned long)p, "0123456789abcdef")))
+	s = ((char *)p == 0) ? ft_strdup("(nil)") :
+		ft_itoa_base((unsigned long)p, "0123456789abcdef");
+	if (!s)
 		return (ft_secur(ap));
 	tmp = s;
-	len = (int)ft_strlen(s) + 2;
-	if (*s == '0' && var->blpr && var->pres == 0)
-		len = 2;
+	len = (s[0] != '(') ? (int)ft_strlen(s) + 2 : (int)ft_strlen(s);
 	while (var->bfor-- > len)
 		var->len += write(1, " ", 1);
-	var->len += write(1, "0x", 2);
+	var->len = (s[0] != '(') ? var->len + write(1, "0x", 2) : var->len;
 	while (*s && var->pres--)
 		var->len += write(1, s++, 1);
 	while (var->aftr-- > len)
 		var->len += write(1, " ", 1);
-	ft_struct_init(var, 0);
 	free(tmp);
 	tmp = NULL;
 	return (0);
@@ -56,7 +55,6 @@ int			ft_conv_c_prct(va_list *ap, t_struct *var, unsigned char c)
 	var->len += write(1, &c, 1);
 	while (var->aftr-- > 1)
 		var->len += write(1, " ", 1);
-	ft_struct_init(var, 0);
 	return (0);
 }
 
@@ -80,6 +78,5 @@ int			ft_conv_s(va_list *ap, t_struct *var)
 		var->len += write(1, s++, 1);
 	while (var->aftr-- > len)
 		var->len += write(1, " ", 1);
-	ft_struct_init(var, 0);
 	return (0);
 }

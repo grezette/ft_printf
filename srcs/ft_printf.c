@@ -50,6 +50,7 @@ int		ft_real_printf(const char **s, va_list *ap, t_struct *var)
 		ft_pars_flag_pres(s, ap, var);
 		if (ft_deep_real_printf(s, ap, var))
 			return (-1);
+		ft_struct_init(var, 0);
 		(*s)++;
 	}
 	return (0);

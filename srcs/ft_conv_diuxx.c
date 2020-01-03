@@ -51,7 +51,6 @@ static int	ft_conv_diuxx_2(t_struct *var, char *s)
 		var->len += write(1, s++, 1);
 	while (var->aftr-- > len)
 		var->len += write(1, " ", 1);
-	ft_struct_init(var, 0);
 	free(tmp);
 	tmp = NULL;
 	return (0);
