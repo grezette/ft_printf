@@ -6,7 +6,7 @@
 #    By: grezette <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/10 10:19:29 by grezette          #+#    #+#              #
-#    Updated: 2019/11/10 19:03:40 by grezette         ###   ########.fr        #
+#    Updated: 2020/01/04 16:08:37 by grezette         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,6 +46,7 @@ SRCS		=	ft_memset.c \
 				ft_putstr_fd.c \
 				ft_putendl_fd.c \
 				ft_putnbr_fd.c \
+				ft_itoa_base.c \
 
 SRCS_BONUS	=	ft_lstnew.c \
 				ft_lstsize.c \

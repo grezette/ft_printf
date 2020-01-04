@@ -6,12 +6,11 @@
 /*   By: grezette <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/01 01:39:21 by grezette          #+#    #+#             */
-/*   Updated: 2020/01/01 15:25:12 by grezette         ###   ########.fr       */
+/*   Updated: 2020/01/04 16:06:12 by grezette         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libftprintf.h"
-#include <stdio.h>
+#include "libft.h"
 
 static char		*ft_rev_char(char *s)
 {

@@ -6,7 +6,7 @@
 /*   By: grezette <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/01 16:50:40 by grezette          #+#    #+#             */
-/*   Updated: 2020/01/01 17:08:58 by grezette         ###   ########.fr       */
+/*   Updated: 2020/01/04 16:05:25 by grezette         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,5 @@ void			ft_pars_flag_mz(const char **s, t_struct *var);
 void			ft_pars_flag_nb(const char **s, va_list *ap, t_struct *var);
 void			ft_pars_flag_pres(const char **s, va_list *ap, t_struct *var);
 void			ft_struct_init(t_struct *var, int bol);
-
-char			*ft_itoa_base(long long int n, char *s);
 
 #endif

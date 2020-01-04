@@ -6,7 +6,7 @@
 /*   By: grezette <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/09 10:20:12 by grezette          #+#    #+#             */
-/*   Updated: 2019/11/10 18:47:47 by grezette         ###   ########.fr       */
+/*   Updated: 2020/01/04 16:08:13 by grezette         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ char				*ft_itoa(int n);
 char				*ft_strdup(const char *s);
 char				*ft_strchr(const char *s, int c);
 char				*ft_strrchr(const char *s, int c);
+char				*ft_itoa_base(long long int nb, char *s);
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strtrim(char const *s1, char const *set);
 char				*ft_substr(char const *s, unsigned int start, size_t len);
