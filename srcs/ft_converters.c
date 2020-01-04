@@ -6,7 +6,7 @@
 /*   By: grezette <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/31 23:16:02 by grezette          #+#    #+#             */
-/*   Updated: 2020/01/01 17:21:33 by grezette         ###   ########.fr       */
+/*   Updated: 2020/01/04 12:10:21 by grezette         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,18 +23,14 @@ int			ft_conv_p(va_list *ap, t_struct *var)
 	char	*s;
 	char	*tmp;
 	int		len;
-	void	*p;
 
-	p = va_arg(*ap, void *);
-	s = ((char *)p == 0) ? ft_strdup("(nil)") :
-		ft_itoa_base((unsigned long)p, "0123456789abcdef");
-	if (!s)
+	if (!(s = ft_itoa_base((long long)va_arg(*ap, void *), "0123456789abcdef")))
 		return (ft_secur(ap));
 	tmp = s;
-	len = (s[0] != '(') ? (int)ft_strlen(s) + 2 : (int)ft_strlen(s);
+	len = (int)ft_strlen(s) + 2;
 	while (var->bfor-- > len)
 		var->len += write(1, " ", 1);
-	var->len = (s[0] != '(') ? var->len + write(1, "0x", 2) : var->len;
+	var->len += write(1, "0x", 2);
 	while (*s && var->pres--)
 		var->len += write(1, s++, 1);
 	while (var->aftr-- > len)
